@@ -43,6 +43,8 @@ class _CalculatorAppState extends State<CalculatorApp> {
         result = '';
         operation = btnValue;
       }
+
+
       else if (btnValue == '<') {
         result = textToDisplay.substring(0, textToDisplay.length - 1);
       }
@@ -160,7 +162,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
                   children: <Widget>[
                   CalcButton(child: ButtonText(text: 'C', color: Colors.white,), onTap: () => buttonPressed('C'), backgroundColor: otherButtonsColor,),
                   CalcButton(child: ButtonText(text: '<', color: Colors.white,), onTap: () => buttonPressed('<'), backgroundColor: otherButtonsColor,),
-                  CalcButton(child: ButtonText(text: '%', color: Colors.white,), onTap: () => buttonPressed('%'), backgroundColor: otherButtonsColor,),
+                  CalcButton(child: ButtonText(text: '?', color: Colors.white,), onTap: () {}, backgroundColor: otherButtonsColor,),
                   CalcButton(child: ButtonText(text: '/', color: Colors.white,), onTap: () => buttonPressed('/'), backgroundColor: otherButtonsColor,),
                 ],),
                 const SizedBox(height: 10,),
@@ -195,7 +197,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     CalcButton(child: ButtonText(text: '0'), onTap: () => buttonPressed('0')),
-                    CalcButton(child: ButtonText(text: '.'), onTap: () => buttonPressed('.')),
+                    CalcButton(child: ButtonText(text: '?'), onTap: () {}),
                     SizedBox(height: 80,child:
                       CalcButton(child: ButtonText(text: '=', color: Colors.white,),
                         onTap: () => buttonPressed('='), backgroundColor: otherButtonsColor, size: 173,),),
